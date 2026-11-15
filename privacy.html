@@ -5,36 +5,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Shorts Uploader Privacy</title>
 <style>
-  :root { --bg:#fafafa; --fg:#1a1a1a; --muted:#555; --link:#1a5fd0; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#141414; --fg:#eee; --muted:#aaa; --link:#7fb0ff; } }
-  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, sans-serif; }
-  main { max-width:680px; margin:0 auto; padding:48px 16px; }
-  h1 { margin-top:0; } h2 { font-size:1.1rem; margin-top:2rem; } p, li { color:var(--muted); } a { color:var(--link); }
+  :root { --bg:#fafafa; --fg:#1a1a1a; --muted:#4a4a4a; --link:#1a5fd0; --line:#e3e3e3; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 system-ui, "Segoe UI", sans-serif; }
+  .url { background:#eef1f5; border-bottom:1px solid var(--line); font:13px/1 ui-monospace, Consolas, monospace; color:#555; padding:10px 16px; }
+  main { max-width:760px; margin:0 auto; padding:40px 16px 56px; }
+  h1 { margin:0 0 4px; } h2 { font-size:1.1rem; margin:28px 0 6px; }
+  p, li { color:var(--muted); } a { color:var(--link); }
+  .meta { color:var(--muted); margin:0 0 20px; }
+  nav { display:flex; gap:20px; font-weight:600; margin-top:32px; padding-top:20px; border-top:1px solid var(--line); }
 </style>
 </head>
 <body>
+<div class="url" id="url">https://diddyahhbludd.github.io/shorts-uploader/privacy.html</div>
 <main>
   <h1>Privacy Policy</h1>
-  <p>Last updated: November 15, 2026</p>
-  <p>Shorts Uploader ("the app") is a personal tool that uploads videos to its owner's own YouTube channel. This policy explains what data the app accesses and how it is handled.</p>
+  <p class="meta">Shorts Uploader · Last updated November 15, 2026</p>
+  <p>Shorts Uploader ("the app") is a personal desktop tool that uploads videos to its owner's own YouTube channel. This policy explains what data the app accesses, how it is used and stored, and how to delete it.</p>
 
   <h2>YouTube API Services</h2>
-  <p>The app uses YouTube API Services. By using the app you agree to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of your data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+  <p>The app uses YouTube API Services (the YouTube Data API v3). By using the app you agree to be bound by the
+    <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's use of your data is described in the
+    <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 
-  <h2>Data the app accesses</h2>
+  <h2>Information the app accesses</h2>
   <ul>
-    <li><strong>Upload permission</strong> (youtube.upload): used only to upload videos the owner chose to publish.</li>
-    <li><strong>Read-only channel info</strong> (youtube.readonly): used only to display the signed-in channel's name so the owner can confirm where uploads go.</li>
+    <li><strong>Upload access</strong> (scope <code>youtube.upload</code>): used only to upload video files the owner chooses, with the title, description and tags the owner provides.</li>
+    <li><strong>Read-only channel info</strong> (scope <code>youtube.readonly</code>): used only to show the signed-in channel's name so the owner can confirm where uploads go.</li>
+  </ul>
+  <p>The app does not access, collect or process any other YouTube or Google account data.</p>
+
+  <h2>How information is used</h2>
+  <p>Data obtained through YouTube API Services is used only to perform the upload the owner requested and to confirm the destination channel. It is not used for advertising, analytics, profiling or any other purpose.</p>
+
+  <h2>Storage</h2>
+  <p>The only thing the app stores is the OAuth sign-in token, saved as a file on the owner's own computer. The app has no server and no database. It does not store YouTube API data such as channel or video information.</p>
+
+  <h2>Sharing</h2>
+  <p>The app does not sell, share, transfer or disclose any user data to third parties. Data obtained from Google APIs is handled in line with the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
+
+  <h2>Cookies and tracking</h2>
+  <p>The app does not use cookies, tracking pixels, device identifiers or any analytics, and does not place or read information on users' devices or browsers beyond the local sign-in token described above.</p>
+
+  <h2>Data retention and deletion</h2>
+  <ul>
+    <li>The sign-in token is kept only until the owner deletes it or revokes access.</li>
+    <li>Deleting the token file from the computer immediately removes the app's stored data.</li>
+    <li>Access can be revoked at any time on the
+      <a href="https://security.google.com/settings/security/permissions">Google security settings page</a>; after revocation the app can no longer access the account.</li>
+    <li>Because the app stores no YouTube API data, there is no other data to delete. Deletion requests can also be sent via the contact link below and will be handled within 7 days.</li>
   </ul>
 
-  <h2>Storage and sharing</h2>
-  <p>The sign-in token is stored only on the owner's own computer. The app has no server, does not collect analytics, and does not sell, share or transfer any user data to third parties. Data obtained from Google APIs is used only for the purposes above, in line with the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements.</p>
-
-  <h2>Revoking access</h2>
-  <p>You can revoke the app's access at any time from your Google Account's <a href="https://myaccount.google.com/permissions">third-party access page</a>. Deleting the locally stored token also removes the app's access from that computer.</p>
+  <h2>Changes</h2>
+  <p>Any change to this policy will be posted on this page with a new "Last updated" date.</p>
 
   <h2>Contact</h2>
-  <p>Questions about this policy: <a href="https://github.com/diddyahhbludd">github.com/diddyahhbludd</a></p>
+  <p><a href="https://github.com/diddyahhbludd">github.com/diddyahhbludd</a></p>
+
+  <nav><a href="./">Home</a><a href="terms.html">Terms of Service</a></nav>
 </main>
+<script>try { document.getElementById("url").textContent = location.href; } catch (e) {}</script>
 </body>
 </html>
